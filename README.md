@@ -73,7 +73,7 @@ python classify_mammals.py -j=/home/daniella/PycharmProjects/mega_detector/detec
 ```
 Explenation of the arguments:
 
--j=/home/daniella/PycharmProjects/mega_detector/detections/out_trial.json - the json file with the results of the megadetector and digits recognition.
+-j=/home/daniella/PycharmProjects/mega_detector/detections/out_trial.json.digits.out - the json file with the results of the megadetector and digits recognition.
 
 Output:
 
