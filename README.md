@@ -46,7 +46,6 @@ vi detections/out_trial.json
 ```
 write ":q" to exit the vi environment.
 
-
 ## Running the detection model
 1) Open the terminal.
 2) Run the model
@@ -55,6 +54,46 @@ conda activate digits
 cd /home/daniella/PycharmProjects/digits_recognition
 python read_temperatures.py -c=./SVHNClassifier-PyTorch/model-54000.pth -j=/home/daniella/PycharmProjects/mega_detector/detections/out_trial.json
 ```
+Explenation of the arguments:
+
+-c=./SVHNClassifier-PyTorch/model-54000.pth - the digits detector model.
+-j=/home/daniella/PycharmProjects/mega_detector/detections/out_trial.json - the json file with the results of the megadetector. 
+
+Output:
+
+The model will create an output json file. The name of the output file will be the name of the input json file + "digits.out". 
+
+## Running the classification model
+1) Open the terminal.
+2) Run the model
+```
+conda activate species_classification
+cd /home/daniella/PycharmProjects/SpeciesClassification
+python classify_mammals.py -j=/home/daniella/PycharmProjects/mega_detector/detections/out_trial.json.digits.out
+```
+Explenation of the arguments:
+
+-j=/home/daniella/PycharmProjects/mega_detector/detections/out_trial.json - the json file with the results of the megadetector and digits recognition.
+
+Output:
+
+The model will create an output json file. The name of the output file will be the name of the input json file + "species.out". 
+
+## Converting results to table
+1) Open the terminal.
+2) Run the convert_json_to_table.py script
+```
+conda activate species_classification
+cd /home/daniella/PycharmProjects/SpeciesClassification
+python convert_json_to_table.py -j=/home/ofir/Dropbox/pycharm_projects/mammals_cameras/detections/out.json.digits.out.species.out
+```
+Explenation of the arguments:
+
+-j=/home/ofir/Dropbox/pycharm_projects/mammals_cameras/detections/out.json.digits.out.species.out - the json file with the results of all the models.
+
+Output:
+
+The script will create an output text file. The name of the output file will be the name of the input json file + "table.txt". 
 
 
 
