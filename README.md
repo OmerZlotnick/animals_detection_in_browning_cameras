@@ -21,7 +21,7 @@ sudo cp -r /home/ofir/Dropbox/pycharm_projects/digits_recognition /home/daniella
 sudo chown -R daniella /home/daniella/PycharmProjects/SpeciesClassification
 ```
 
-## Running the detection model
+## Running the temperature detection model
 
 1) Open the terminal.
 2) Run the model
