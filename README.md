@@ -26,7 +26,7 @@ sudo chown -R daniella /home/daniella/PycharmProjects/SpeciesClassification
 1) Open the terminal.
 2) Run the model
 ```
-conda activate mammmals
+conda activate mammals
 cd /home/daniella/PycharmProjects/mega_detector
 python run_tf_detector_batch.py md_v4.1.0.pb /data2/Daniella_camera_traps_cont/Alona2_May/cam_23 detections/out_trial.json --recursive --threshold 0.25
 ```
@@ -44,8 +44,17 @@ detections/out_trial.json - the path and name of the output file.
 ```
 vi detections/out_trial.json
 ```
-write ":x" to exit the vi environment.
+write ":q" to exit the vi environment.
 
+
+## Running the detection model
+1) Open the terminal.
+2) Run the model
+```
+conda activate digits
+cd /home/daniella/PycharmProjects/digits_recognition
+python read_temperatures.py -c=./SVHNClassifier-PyTorch/model-54000.pth -j=/home/daniella/PycharmProjects/mega_detector/detections/out_trial.json
+```
 
 
 
