@@ -52,7 +52,7 @@ write ":q" to exit the vi environment.
 ```
 conda activate digits
 cd /home/daniella/PycharmProjects/digits_recognition
-python read_temperatures.py -c=./SVHNClassifier-PyTorch/model-54000.pth -j=/home/daniella/PycharmProjects/mega_detector/detections/out_trial.json
+python read_temperatures_08-08-2021.py -c=./SVHNClassifier-PyTorch/model-54000.pth -j=/home/daniella/PycharmProjects/mega_detector/detections/out_trial.json
 ```
 Explenation of the arguments:
 
