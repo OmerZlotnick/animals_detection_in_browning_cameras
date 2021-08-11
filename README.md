@@ -7,13 +7,11 @@ To export an environment:
 ```
 conda env export --name mammals > /data/mammals.yml
 conda env export --name digits > /data/digits.yml
-conda env export --name species_classification > /data/species_classification.yml
 ```
 To import an environment:
 ```
 conda env create --file /data/mammals.yml
 conda env create --file /data/digits.yml
-conda env create --file /data/species_classification.yml
 ```
 To copy python project from a uset to another user:
 ```
@@ -81,9 +79,9 @@ cd /home/daniella/PycharmProjects/mega_detector/for_analysis
 Then, use the 'find' and 'cat' commands to concatonate all txt files into one file:
 ```
 # add end-of-line to each file if it's missing
-find . -name "*.txt" -exec sed -i -e '$a\' {} +
+find . -follow -name "*.txt" -exec sed -i -e '$a\' {} +
 # create a file temperatures.txt from all the files
-find . -name "*.txt" -exec cat > temperatures.txt {} +
+find . -follow -name "*.txt" -exec cat > temperatures.txt {} +
 ```
 
 ## Running the classification model
@@ -117,9 +115,9 @@ cd /home/daniella/PycharmProjects/mega_detector/for_analysis
 Then, use the 'find' and 'cat' commands to concatonate all txt files into one file:
 ```
 # add end-of-line to each file if it's missing
-find . -name "classification_*.txt" -exec sed -i -e '$a\' {} +
+find . -follow -name "classification_*.txt" -exec sed -i -e '$a\' {} +
 # create a file temperatures.txt from all the files
-find . -name "classification_*.txt" -exec cat > classifications.txt {} +
+find . -follow -name "classification_*.txt" -exec cat > classifications.txt {} +
 ```
 
 
