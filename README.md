@@ -59,11 +59,34 @@ Explenation of the arguments:
 -c=./SVHNClassifier-PyTorch/model-54000.pth - the digits detector model.
 -j=/home/daniella/PycharmProjects/mega_detector/detections/out_trial.json - the json file with the results of the megadetector. 
 
+To run the model in parallel at several terminals:
+```
+conda activate digits
+./run_detector.sh 2 1 out_for_analysis_2-8-21.json 
+```
+Explenation of the arguments:
+1) The number of processes to run in parallel. In this case: 2
+2) The GPU number (either 0 or 1) to run the processes. In this case: 1
+3) The json file to analyze. In this case: out_for_analysis_2-8-21.json
+
 Output:
 
-The model will create an output json file. The name of the output file will be the name of the input json file + "digits.out". 
+The model will a txt output file for each image. The name of the output files will be the name of the input image file + ".txt". 
+
+To collect the files into one big file, open the terminal in the main folder of the images. For example:
+```
+cd /home/daniella/PycharmProjects/mega_detector/for_analysis
+```
+Then, use the 'find' and 'cat' commands to concatonate all txt files into one file:
+```
+# add end-of-line to each file if it's missing
+find . -name "*.txt" -exec sed -i -e '$a\' {} +
+# create a file temperatures.txt from all the files
+find . -name "*.txt" -exec cat > temperatures.txt {} +
+```
 
 ## Running the classification model
+
 1) Open the terminal.
 2) Run the model
 ```
