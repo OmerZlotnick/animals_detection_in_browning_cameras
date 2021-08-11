@@ -62,7 +62,7 @@ Explenation of the arguments:
 To run the model in parallel at several terminals:
 ```
 conda activate digits
-./run_detector.sh 2 1 out_for_analysis_2-8-21.json 
+./run_detector_digits.sh 2 1 out_for_analysis_2-8-21.json 
 ```
 Explenation of the arguments:
 1) The number of processes to run in parallel. In this case: 2
