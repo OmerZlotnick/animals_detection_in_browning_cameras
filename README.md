@@ -52,12 +52,13 @@ write ":q" to exit the vi environment.
 ```
 conda activate digits
 cd /home/daniella/PycharmProjects/digits_recognition
-python read_temperatures_08-08-2021.py -c=./SVHNClassifier-PyTorch/model-54000.pth -j=/home/daniella/PycharmProjects/mega_detector/detections/out_trial.json
+python read_temperatures_08-08-2021.py -c=./SVHNClassifier-PyTorch/model-54000.pth -j=/home/daniella/PycharmProjects/mega_detector/detections/out_for_analysis_2-8-21.json
 ```
 Explenation of the arguments:
 
 -c=./SVHNClassifier-PyTorch/model-54000.pth - the digits detector model.
--j=/home/daniella/PycharmProjects/mega_detector/detections/out_trial.json - the json file with the results of the megadetector. 
+
+-j=/home/daniella/PycharmProjects/mega_detector/detections/out_trial.json - the json file with the results of the mega-detector. 
 
 To run the model in parallel at several terminals:
 ```
@@ -71,7 +72,7 @@ Explenation of the arguments:
 
 Output:
 
-The model will a txt output file for each image. The name of the output files will be the name of the input image file + ".txt". 
+The model will write a text output file for each image. The name of the output files will be the name of the input image file + ".txt". 
 
 To collect the files into one big file, open the terminal in the main folder of the images. For example:
 ```
@@ -90,38 +91,36 @@ find . -name "*.txt" -exec cat > temperatures.txt {} +
 1) Open the terminal.
 2) Run the model
 ```
-conda activate species_classification
+conda activate computer_vision
 cd /home/daniella/PycharmProjects/SpeciesClassification
-python classify_mammals.py -j=/home/daniella/PycharmProjects/mega_detector/detections/out_trial.json.digits.out
+python classify_mammals_daniella_model.py -j=/home/daniella/PycharmProjects/mega_detector/detections/out_for_analysis_2-8-21.json
 ```
 Explenation of the arguments:
 
--j=/home/daniella/PycharmProjects/mega_detector/detections/out_trial.json.digits.out - the json file with the results of the megadetector and digits recognition.
+-j=/home/daniella/PycharmProjects/mega_detector/detections/out_trial.json - the json file with the results of the mega-detector. 
+
+To run the model in parallel at several terminals:
+```
+conda activate computer_vision
+./run_detector_classification.sh 2 1 out_for_analysis_2-8-21.json 
+```
+The arguments passed to `run_detector_classification.sh` have the same meaning as for the `run_detector_digits.sh` bash script.
 
 Output:
 
-The model will create an output json file. The name of the output file will be the name of the input json file + "species.out". 
+The model will write a text output file for each image. The name of the output files will be "classification_" + the name of the input image file + ".txt". 
 
-## Converting results to table
-1) Open the terminal.
-2) Run the convert_json_to_table.py script
+To collect the files into one big file, open the terminal in the main folder of the images. For example:
 ```
-conda activate species_classification
-cd /home/daniella/PycharmProjects/SpeciesClassification
-python convert_json_to_table.py -j=/home/ofir/Dropbox/pycharm_projects/mammals_cameras/detections/out.json.digits.out.species.out
+cd /home/daniella/PycharmProjects/mega_detector/for_analysis
 ```
-Explenation of the arguments:
-
--j=/home/ofir/Dropbox/pycharm_projects/mammals_cameras/detections/out.json.digits.out.species.out - the json file with the results of all the models.
-
-Output:
-
-The script will create an output text file. The name of the output file will be the name of the input json file + "table.txt". 
-
-
-
-
-
+Then, use the 'find' and 'cat' commands to concatonate all txt files into one file:
+```
+# add end-of-line to each file if it's missing
+find . -name "classification_*.txt" -exec sed -i -e '$a\' {} +
+# create a file temperatures.txt from all the files
+find . -name "classification_*.txt" -exec cat > classifications.txt {} +
+```
 
 
 
