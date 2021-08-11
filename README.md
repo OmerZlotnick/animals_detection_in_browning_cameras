@@ -79,9 +79,9 @@ cd /home/daniella/PycharmProjects/mega_detector/for_analysis
 Then, use the 'find' and 'cat' commands to concatonate all txt files into one file:
 ```
 # add end-of-line to each file if it's missing
-find . -follow -name "*.txt" -exec sed -i -e '$a\' {} +
+find . -follow -name "IMG_*.txt" -exec sed -i -e '$a\' {} +
 # create a file temperatures.txt from all the files
-find . -follow -name "*.txt" -exec cat > temperatures.txt {} +
+find . -follow -name "IMG_*.txt" -exec cat > temperatures.txt {} +
 ```
 
 ## Running the classification model
