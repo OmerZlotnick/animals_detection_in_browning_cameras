@@ -19,7 +19,7 @@ sudo cp -r /home/ofir/Dropbox/pycharm_projects/digits_recognition /home/daniella
 sudo chown -R daniella /home/daniella/PycharmProjects/SpeciesClassification
 ```
 
-## Running the temperature detection model
+## Running the megadetector model
 
 1) Open the terminal.
 2) Run the model
@@ -44,7 +44,7 @@ vi detections/out_trial.json
 ```
 write ":q" to exit the vi environment.
 
-## Running the detection model
+## Running the temperature reader model
 1) Open the terminal.
 2) Run the model
 ```
@@ -84,7 +84,7 @@ find . -follow -name "IMG_*.txt" -exec sed -i -e '$a\' {} +
 find . -follow -name "IMG_*.txt" -exec cat > temperatures.txt {} +
 ```
 
-## Running the classification model
+## Running the animal classification model
 
 1) Open the terminal.
 2) Run the model
