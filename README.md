@@ -120,6 +120,13 @@ find . -follow -name "classification_*.txt" -exec sed -i -e '$a\' {} +
 find . -follow -name "classification_*.txt" -exec cat > classifications.txt {} +
 ```
 
+## Re-running the classification model
+If you need to run the model again, you first need to delete all the txt files
+```
+find . -follow -name "classification_*.txt" 
+ # add "-exec rm -rf {}" if it works ok
+find . -follow -name "classification_*.txt" -exec rm -rf {} 
+```
 
 
 
