@@ -125,7 +125,7 @@ If you need to run the model again, you first need to delete all the txt files
 ```
 find . -follow -name "classification_*.txt" 
  # add "-exec rm -rf {}" if it works ok
-find . -follow -name "classification_*.txt" -exec rm -rf {} 
+find . -follow -name "classification_*.txt" -exec rm -rf {} \;
 ```
 
 
