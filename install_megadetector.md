@@ -1,5 +1,5 @@
 Use the instructions here: to install the megadetector environment:
-1. Install conda
+1. Install conda:
 ```
 cd /data
 ./Miniconda3-latest-Linux-x86_64.sh #run installation
@@ -15,8 +15,8 @@ git clone https://github.com/Microsoft/ai4eutils
 ```
 cd cameratraps
 conda env create --file environment-detector.yml
-
-4. Finally, install tensorflow
+```
+4. Finally, install tensorflow:
 ```
 conda activate cameratraps-detector
 pip install tensorflow
