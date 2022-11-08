@@ -15,4 +15,9 @@ git clone https://github.com/Microsoft/ai4eutils
 ```
 cd cameratraps
 conda env create --file environment-detector.yml
+
+4. Finally, install tensorflow
+```
+conda activate cameratraps-detector
+pip install tensorflow
 ```
