@@ -55,7 +55,7 @@ cd SpeciesClassification/
 python classify_mammals_daniella_model_for_check.py -j ../mega_detector/out_trial_loc_num.json
 ```
 
-# **notes**
+# notes
 ../ - symbol to tell computer to look at one library higher than current one
 out_trial_loc_num.json - name of json file, "num" refers to number of location if in file name.
 
