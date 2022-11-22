@@ -34,3 +34,28 @@ vi detections/out_trial.json
 Write ":q" to exit the vi environment.
 
 
+# classification model
+
+1. open commandline
+2. Insert code to open computer vision environment
+
+```
+conda activate computer vision
+```
+3. if not in PycharmProjects enter
+```
+cd PycharmProjects/
+```
+4. Enter code to choose speciesclassification
+```
+cd SpeciesClassification/
+```
+4. Insert code
+```
+python classify_mammals_daniella_model_for_check.py -j ../mega_detector/out_trial_loc_num.json
+```
+
+#notes
+../ - symbol to tell computer to look at one library higher than current one
+out_trial_loc_num.json - name of json file, "num" refers to number of location if in file name.
+
