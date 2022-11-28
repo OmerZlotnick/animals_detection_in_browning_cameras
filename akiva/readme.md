@@ -59,7 +59,7 @@ python classify_mammals_daniella_model_for_check.py -j ../mega_detector/out_tria
 ../ - symbol to tell computer to look at one library higher than current one
 out_trial_loc_num.json - name of json file, "num" refers to number of location if in file name.
 
-#Re-running the classification model
+# Re-running the classification model
 If you need to run the model again, you first need to delete all the txt files
 
 ```
