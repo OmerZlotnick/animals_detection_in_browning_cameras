@@ -40,7 +40,7 @@ Write ":q" to exit the vi environment.
 2. Insert code to open computer vision environment
 
 ```
-conda activate computer vision
+conda activate computer_vision
 ```
 3. if not in PycharmProjects enter
 ```
