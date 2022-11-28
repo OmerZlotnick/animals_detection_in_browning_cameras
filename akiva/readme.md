@@ -17,7 +17,7 @@ cd mega_detector/
 ```
 python run_detector_batch.py md_v4.1.0.pb /data2/loc_12-by\ lower\ seperation ./out_trial.json --recursive --threshold 0.25
 ```
-# notes
+## notes
 
 /data2/loc_12-by\ lower\ seperation - The path to the folder with the images. Make sure to put \ before any spaces.
 
@@ -55,7 +55,7 @@ cd SpeciesClassification/
 python classify_mammals_daniella_model_for_check.py -j ../mega_detector/out_trial_loc_num.json
 ```
 
-# notes
+## notes
 ../ - symbol to tell computer to look at one library higher than current one
 out_trial_loc_num.json - name of json file, "num" refers to number of location if in file name.
 
