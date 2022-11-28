@@ -56,7 +56,7 @@ python classify_mammals_daniella_model_for_check.py -j ../mega_detector/out_tria
 ```
 
 ## notes
-1)../ - symbol to tell computer to look at one library higher than current one
+1) ../ - symbol to tell computer to look at one library higher than current one 
 2) out_trial_loc_num.json - name of json file, "num" refers to number of location if in file name.
 
 # Re-running the classification model
