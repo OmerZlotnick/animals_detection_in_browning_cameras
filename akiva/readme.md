@@ -68,5 +68,6 @@ find . -follow -name "classification_*.txt"
  # add "-exec rm -rf {}" if it works ok to delete files
 find . -follow -name "classification_*.txt" -exec rm -rf {} \;
 #for detection files run
-find . loc_12-by lower seperation -name "detection_*" -exec rm -rf {} \;
+find . -follow -name "detection_*.JPG" -exec rm -rf {} \;
+
 ```
