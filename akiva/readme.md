@@ -52,7 +52,7 @@ cd SpeciesClassification/
 ```
 4. Insert code
 ```
-python classify_mammals_daniella_model_for_check.py -j ../mega_detector/out_trial_loc_num.json
+python classify_mammals_akiva.py -j ../mega_detector/out_trial_loc_num.json
 ```
 
 ## notes
