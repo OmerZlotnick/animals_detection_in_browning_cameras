@@ -55,7 +55,7 @@ All codes presented here run on the terminal.
     cd cameratraps
     conda env create --file environment-detector-mac.yml
     conda activate cameratraps-detector
-    export PYTHONPATH="$PYTHONPATH:$/data2/omer_zlotnick/chapter1/ai_tools/git/cameratraps:$/data2/omer_zlotnick/chapter1/ai_tools/git/ai4eutils:$/data2/omer_zlotnick/chapter1/ai_tools//git/yolov5"
+    export PYTHONPATH="$PYTHONPATH:/data2/omer_zlotnick/chapter1/ai_tools/git/cameratraps:/data2/omer_zlotnick/chapter1/ai_tools/git/ai4eutils:/data2/omer_zlotnick/chapter1/ai_tools//git/yolov5"
     ```
 
 3) using megadetector
@@ -64,7 +64,7 @@ All codes presented here run on the terminal.
     ```
     cd /data2/omer_zlotnick/chapter1/ai_tools/git/cameratraps
     conda activate cameratraps-detector
-    export PYTHONPATH="$PYTHONPATH:$/data2/omer_zlotnick/chapter1/ai_tools/git/cameratraps:$/data2/omer_zlotnick/chapter1/ai_tools/git/ai4eutils:$/data2/omer_zlotnick/chapter1/ai_tools//git/yolov5"
+    export PYTHONPATH="$PYTHONPATH:/data2/omer_zlotnick/chapter1/ai_tools/git/cameratraps:/data2/omer_zlotnick/chapter1/ai_tools/git/ai4eutils:/data2/omer_zlotnick/chapter1/ai_tools//git/yolov5"
     ```
     
     b. now, we use the run_detector_batch function.
@@ -73,7 +73,7 @@ All codes presented here run on the terminal.
       location of the input images
       wanted location for the json output file
     ```
-    python detection/run_detector_batch.py "$/data2/omer_zlotnick/chapter1/ai_tools/git/md_v5a.0.0.pt" "/data2/omer_zlotnick/chapter1/datasets_for_models/dataset1/raw_images" "$/data2/omer_zlotnick/chapter1/datasets_for models/dataset1/md_results/md_results.json" --output_relative_filenames --recursive --checkpoint_frequency 10000
+    python detection/run_detector_batch.py "/data2/omer_zlotnick/chapter1/ai_tools/git/md_v5a.0.0.pt" "/data2/omer_zlotnick/chapter1/datasets_for_models/dataset1/raw_images" "/data2/omer_zlotnick/chapter1/datasets_for models/dataset1/md_results/md_results.json" --output_relative_filenames --recursive --checkpoint_frequency 10000
     ```
     
     
